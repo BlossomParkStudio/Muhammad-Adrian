@@ -385,6 +385,8 @@
 
 body {
   animation: pageLoad 0.6s ease-out;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Hover Effects for Interactive Elements */
@@ -396,6 +398,8 @@ button {
 /* Smooth Scroll Behavior */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Enhanced Glow Effects */
