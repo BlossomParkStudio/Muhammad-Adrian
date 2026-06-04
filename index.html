@@ -89,12 +89,12 @@
     <style type="text/tailwindcss">
       @theme {
         --font-sans: "Inter", sans-serif;
-        --color-brutalism-yellow: #ffde59;
-        --color-brutalism-pink: #ff74a6;
-        --color-brutalism-blue: #5cb0ff;
-        --color-brutalism-green: #4de584;
-        --color-brutalism-orange: #ff914d;
-        --color-brutalism-purple: #b273ff;
+        --color-brutalism-yellow: #ffea00;
+        --color-brutalism-pink: #ff3385;
+        --color-brutalism-blue: #1a9cff;
+        --color-brutalism-green: #00f06a;
+        --color-brutalism-orange: #ff7300;
+        --color-brutalism-purple: #9b24ff;
         --color-brutalism-bg: #f8f9fa;
         --shadow-brutalism: 4px 4px 0px 0px #000000;
         --shadow-brutalism-lg: 8px 8px 0px 0px #000000;
@@ -494,54 +494,25 @@
               YouTube.
             </p>
 
-            <div class="flex flex-wrap items-center gap-4 mb-10">
-              <div
-                class="flex items-center gap-3 bg-white border-4 border-black shadow-brutalism px-5 py-3 rounded-md hover:-translate-y-1 transition-transform cursor-default"
-              >
-                <div
-                  class="w-8 h-8 rounded-full bg-brutalism-pink flex items-center justify-center border-2 border-black shrink-0"
-                >
-                  <img
-                    src="https://api.iconify.design/ic:baseline-location-on.svg"
-                    alt="Location"
-                    width="16px"
-                  />
-                </div>
-                <span class="font-bold text-sm uppercase text-black"
-                  >Bogor, ID</span
-                >
+            <div class="grid grid-cols-2 gap-2 sm:gap-4 max-w-lg mb-10">
+              <!-- Location -->
+              <div class="flex items-center gap-2 sm:gap-3 bg-white border-4 border-black shadow-brutalism px-2 py-2 sm:px-4 sm:py-3 rounded-md cursor-default">
+                <span class="iconify text-xl sm:text-2xl text-brutalism-pink shrink-0" data-icon="ic:baseline-location-on"></span>
+                <span class="font-bold text-[11px] sm:text-sm text-black leading-tight">Bogor,<br>Indonesia</span>
               </div>
 
-              <a
-                href="mailto:muhamadadrian2507@gmail.com"
-                class="flex items-center gap-3 bg-white border-4 border-black shadow-brutalism px-5 py-3 rounded-md hover:-translate-y-1 transition-transform group"
-              >
-                <div
-                  class="w-8 h-8 rounded-full bg-brutalism-blue flex items-center justify-center border-2 border-black shrink-0 group-hover:animate-bounce"
-                >
-                  <img
-                    src="https://api.iconify.design/ic:baseline-email.svg"
-                    alt="Email"
-                    width="16px"
-                  />
-                </div>
-                <span class="font-bold text-sm uppercase text-black"
-                  >Email Saya</span
-                >
+              <!-- Email -->
+              <a href="mailto:muhamadadrian2507@gmail.com" class="flex items-center gap-2 sm:gap-3 bg-white border-4 border-black shadow-brutalism px-2 py-2 sm:px-4 sm:py-3 rounded-md group hover:-translate-y-1 transition-transform overflow-hidden">
+                <span class="iconify text-xl sm:text-2xl text-brutalism-blue shrink-0 group-hover:animate-bounce" data-icon="ic:baseline-email"></span>
+                <span class="font-bold text-[11px] sm:text-sm text-black leading-tight break-words">muhamadadrian<wbr>2507<wbr>@gmail.com</span>
+              </a>
+
+              <!-- Rekrut Saya / Unduh CV Button -->
+              <a href="#contact" class="col-span-2 flex items-center justify-center gap-2 sm:gap-3 bg-white text-black font-black uppercase text-base sm:text-lg border-4 border-black shadow-brutalism p-3 sm:p-4 rounded-md hover:-translate-y-1 hover:shadow-brutalism-lg transition-all group mt-2">
+                <span class="iconify text-xl sm:text-2xl text-black" data-icon="mdi:send"></span>
+                <span data-translate="about-hire">REKRUT SAYA</span>
               </a>
             </div>
-
-            <a
-              href="./assets/doc/CV.pdf"
-              target="_blank"
-              class="brutalism-btn inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-white font-black uppercase text-lg border-4 border-black shadow-brutalism-lg hover:bg-brutalism-yellow hover:text-black transition-colors rounded-md group"
-            >
-              <span
-                class="iconify text-2xl text-black"
-                data-icon="mdi:document"
-              ></span>
-              <span data-translate="about-hire">Unduh CV</span>
-            </a>
           </div>
         </div>
       </div>
@@ -549,9 +520,9 @@
 
     <section
       id="projects"
-      class="py-20 sm:py-32 border-y-8 border-black bg-brutalism-blue"
+      class="py-16 sm:py-24 border-y-8 border-black bg-brutalism-blue"
     >
-      <div class="container mx-auto px-4 sm:px-6">
+      <div class="container mx-auto px-2 sm:px-4">
         <div
           class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 text-center md:text-left reveal reveal-up"
         >
@@ -582,168 +553,150 @@
           </div>
         </div>
         <div
-          class="carousel-container p-10 relative reveal reveal-scale delay-200"
+          class="carousel-container p-2 md:p-5 relative reveal reveal-scale delay-200"
         >
           <div class="carousel-inner" id="projectCarousel">
             <div class="carousel-item">
-              <div
-                class="project-card rounded-xl overflow-hidden shadow-neuro-dark bg-dark-card glass-dark border border-pink-400/20 h-full"
-              >
+              <div class="project-card flex flex-col h-full bg-white">
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
                   <img
                     src="assets/images/project-1.jpeg"
-                    alt="project 1"
+                    alt="Profile Website"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="p-4 bg-white">
+                <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
-                    class="text-lg font-black mb-2 text-black uppercase tracking-tight"
-                    data-translate="project9-title"
+                    class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
                   >
                     Profile Website
                   </h3>
                   <p
-                    class="text-black font-bold mb-4 text-xs text-justify"
-                    data-translate="project9-desc"
+                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
                   >
                     Website Profile yang dirancang dengan Google Sites.
                   </p>
-                  <div class="flex gap-4 mt-auto">
+                  <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-yellow text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-green text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Kunjungi</a
                     >
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="carousel-item">
-              <div
-                class="project-card rounded-xl overflow-hidden shadow-neuro-dark bg-dark-card glass-dark border border-purple-400/20 h-full"
-              >
+              <div class="project-card flex flex-col h-full bg-white">
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
                   <img
                     src="assets/images/project-2.jpeg"
-                    alt=""
+                    alt="Digital Lib"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="p-4 bg-white">
+                <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
-                    class="text-lg font-black mb-2 text-black uppercase tracking-tight"
-                    data-translate="badge-portfolio"
+                    class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
                   >
                     Digital Lib
                   </h3>
                   <p
-                    class="text-black font-bold mb-4 text-xs text-justify"
-                    data-translate="project-donghuawatch-desc"
+                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
                   >
                     Web-based Digital Library. Platform manajemen perpustakaan
                     terintegrasi untuk eksplorasi katalog buku. Dibuat
                     menggunakan Laravel.
                   </p>
-                  <div class="flex gap-4 mt-auto">
+                  <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-yellow text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-green text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Kunjungi</a
                     >
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="carousel-item">
-              <div
-                class="project-card rounded-xl overflow-hidden shadow-neuro-dark bg-dark-card glass-dark border border-emerald-400/20 h-full"
-              >
+              <div class="project-card flex flex-col h-full bg-white">
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
                   <img
                     src="assets/images/project-3.jpeg"
-                    alt=""
+                    alt="Web-based POS"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="p-4 bg-white">
+                <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
-                    class="text-lg font-black mb-2 text-black uppercase tracking-tight"
-                    data-translate="project12-title"
+                    class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
                   >
                     Web-based POS
                   </h3>
                   <p
-                    class="text-black font-bold mb-4 text-xs text-justify"
-                    data-translate="project12-desc"
+                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
                   >
                     Aplikasi Point of Sale (POS) berbasis web yang dirancang
                     untuk mengelola proses transaksi, manajemen inventaris, dan
-                    pelacakan laporan penjuala. Yang dibuat menggunakan Laravel.
+                    pelacakan laporan penjualan. Yang dibuat menggunakan
+                    Laravel.
                   </p>
-                  <div class="flex gap-4 mt-auto">
+                  <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-yellow text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-green text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Kunjungi</a
                     >
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="carousel-item">
-              <div
-                class="project-card rounded-xl overflow-hidden shadow-neuro-dark bg-dark-card glass-dark border border-brutalism-yellow/20 h-full"
-              >
+              <div class="project-card flex flex-col h-full bg-white">
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
                   <img
                     src="assets/images/project-4.jpeg"
-                    alt=""
+                    alt="Script Import Excel Otomatis"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="p-4 bg-white">
+                <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
-                    class="text-lg font-black mb-2 text-black uppercase tracking-tight"
-                    data-translate="project13-title"
+                    class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
                   >
                     Script Import Excel Otomatis
                   </h3>
                   <p
-                    class="text-black font-bold mb-4 text-xs text-justify"
-                    data-translate="project13-desc"
+                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
                   >
                     Berhasil mengimplementasikan dan mengelola skrip otomatisasi
                     pada platform iBoss untuk mengoptimalkan efisiensi kerja.
@@ -751,60 +704,23 @@
                     meminimalkan human error, serta memastikan seluruh sistem
                     operasional berjalan sesuai dengan prosedur yang ditentukan.
                   </p>
-                  <div class="flex gap-4 mt-auto">
+                  <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-yellow text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-green text-center text-xs rounded-md"
+                      class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
                       >Kunjungi</a
                     >
                   </div>
                 </div>
               </div>
             </div>
-            <!-- 
-            <div class="carousel-item">
-              <div
-                class="project-card rounded-xl overflow-hidden shadow-neuro-dark bg-dark-card glass-dark border border-blue-400/20 h-full"
-              >
-                <div
-                  class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
-                >
-                  <img src="" alt="" class="w-full h-full object-contain" />
-                </div>
-                <div class="p-4 bg-white">
-                  <h3
-                    class="text-lg font-black mb-2 text-black uppercase tracking-tight"
-                  >
-                    Lorem Ipsum
-                  </h3>
-                  <p class="text-black font-bold mb-4 text-xs text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam, quod.
-                  </p>
-                  <div class="flex gap-4 mt-auto">
-                    <a
-                      href="javascript:void(0)"
-                      onclick="showPrivateAlert()"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-yellow text-center text-xs rounded-md"
-                      >Source Code</a
-                    >
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="brutalism-btn flex-1 py-1.5 bg-brutalism-green text-center text-xs rounded-md"
-                      >Kunjungi</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -1124,10 +1040,10 @@
           <!-- Item 1 -->
           <div class="flex flex-col gap-6 reveal reveal-up">
             <div
-              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full"
+              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full flex flex-col"
             >
               <div
-                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg"
+                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
                 <img
                   src="./assets/images/sertifikat/pklomega.jpeg"
@@ -1135,69 +1051,73 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+              <button
+                data-title="Sertifikat Magang PT Jala Lintas Media"
+                data-badge="PT Jala Lintas Media - 2025"
+                data-desc="Sertifikat tanda bukti telah menyelesaikan program magang sebagai Staf Dismantle, dengan pencapaian penghargaan 'Best Performance Staff Dismantle' periode 2024-2025."
+                onclick="openCertModal(this)"
+                class="mt-auto brutalism-btn bg-brutalism-blue text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
+              >
+                Detail
+              </button>
             </div>
-            <button
-              data-title="Sertifikat Magang PT Jala Lintas Media"
-              data-badge="PT Jala Lintas Media - 2025"
-              data-desc="Sertifikat tanda bukti telah menyelesaikan program magang sebagai Staf Dismantle, dengan pencapaian penghargaan 'Best Performance Staff Dismantle' periode 2024-2025."
-              onclick="openCertModal(this)"
-              class="brutalism-btn bg-brutalism-blue text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
-            >
-              Detail
-            </button>
           </div>
 
           <!-- Item 2 -->
           <div class="flex flex-col gap-6 reveal reveal-up delay-100">
             <div
-              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full"
+              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full flex flex-col"
             >
               <div
-                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg"
+                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
-                <img src="" alt="" class="w-full h-full object-cover" />
+                <img
+                  src="./assets/images/sertifikat/keteranganomega.jpeg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
               </div>
+              <button
+                data-title="Surat Keterangan Magang"
+                data-badge="PT Omega Digital Global - 2025"
+                data-desc="Dokumen resmi yang menerangkan kontribusi nyata dalam pemantauan data operasional, penggunaan platform iBOSS, dan validasi perangkat."
+                onclick="openCertModal(this)"
+                class="mt-auto brutalism-btn bg-brutalism-purple text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
+              >
+                Detail
+              </button>
             </div>
-            <button
-              data-title="Surat Keterangan Magang"
-              data-badge="PT Jala Lintas Media - 2025"
-              data-desc="Dokumen resmi yang menerangkan kontribusi nyata dalam pemantauan data operasional, penggunaan platform iBOSS, dan validasi perangkat."
-              onclick="openCertModal(this)"
-              class="brutalism-btn bg-brutalism-purple text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
-            >
-              Detail
-            </button>
           </div>
 
           <!-- Item 3 -->
           <div class="flex flex-col gap-6 reveal reveal-up delay-200">
             <div
-              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full"
+              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full flex flex-col"
             >
               <div
-                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg"
+                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
                 <img src="" alt="" class="w-full h-full object-cover" />
               </div>
+              <button
+                data-title="Sertifikasi Kompetensi BNSP"
+                data-badge="BNSP - Skema Programmer"
+                data-desc="Sertifikasi kompetensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP) yang menyatakan status kompeten dalam skema pekerjaan Programmer."
+                onclick="openCertModal(this)"
+                class="mt-auto brutalism-btn bg-brutalism-green text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
+              >
+                Detail
+              </button>
             </div>
-            <button
-              data-title="Sertifikasi Kompetensi BNSP"
-              data-badge="BNSP - Skema Programmer"
-              data-desc="Sertifikasi kompetensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP) yang menyatakan status kompeten dalam skema pekerjaan Programmer."
-              onclick="openCertModal(this)"
-              class="brutalism-btn bg-brutalism-green text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
-            >
-              Detail
-            </button>
           </div>
 
           <!-- Item 4 -->
           <div class="flex flex-col gap-6 reveal reveal-up">
             <div
-              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full"
+              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full flex flex-col"
             >
               <div
-                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg"
+                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
                 <img
                   src="./assets/images/sertifikat/toeic.jpeg"
@@ -1205,25 +1125,25 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+              <button
+                data-title="Sertifikat TOEIC (CECRL)"
+                data-badge="TOEIC"
+                data-desc="Sertifikat pencapaian penguasaan Bahasa Inggris berdasarkan standar Test of English for International Communication (TOEIC) - CECRL."
+                onclick="openCertModal(this)"
+                class="mt-auto brutalism-btn bg-white text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
+              >
+                Detail
+              </button>
             </div>
-            <button
-              data-title="Sertifikat TOEIC (CECRL)"
-              data-badge="TOEIC"
-              data-desc="Sertifikat pencapaian penguasaan Bahasa Inggris berdasarkan standar Test of English for International Communication (TOEIC) - CECRL."
-              onclick="openCertModal(this)"
-              class="brutalism-btn bg-white text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
-            >
-              Detail
-            </button>
           </div>
 
           <!-- Item 5 -->
           <div class="flex flex-col gap-6 reveal reveal-up delay-100">
             <div
-              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full"
+              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full flex flex-col"
             >
               <div
-                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg"
+                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
                 <img
                   src="./assets/images/sertifikat/juara2webjurnal.jpeg"
@@ -1231,25 +1151,25 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+              <button
+                data-title="Juara 2 Lomba Web Jurnalistik"
+                data-badge="Amalia Islamic School - 2023"
+                data-desc="Juara 2 lomba Web Jurnalistik memperingati Hari Pers Nasional 9 Februari 2023."
+                onclick="openCertModal(this)"
+                class="mt-auto brutalism-btn bg-brutalism-pink text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
+              >
+                Detail
+              </button>
             </div>
-            <button
-              data-title="Juara 2 Lomba Web Jurnalistik"
-              data-badge="Amalia Islamic School - 2023"
-              data-desc="Juara 2 lomba Web Jurnalistik memperingati Hari Pers Nasional 9 Februari 2023."
-              onclick="openCertModal(this)"
-              class="brutalism-btn bg-brutalism-pink text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
-            >
-              Detail
-            </button>
           </div>
 
           <!-- Item 6 -->
           <div class="flex flex-col gap-6 reveal reveal-up delay-200">
             <div
-              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full"
+              class="bg-white border-4 border-black shadow-brutalism p-4 rounded-md h-full flex flex-col"
             >
               <div
-                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg"
+                class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
                 <img
                   src="./assets/images/sertifikat/juara2video.jpeg"
@@ -1257,16 +1177,16 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+              <button
+                data-title="Juara 2 Lomba Video Inspiratif"
+                data-badge="Amalia Islamic School - 2023"
+                data-desc="Juara 2 Lomba Video Inspiratif memperingati Hari Pendidikan Nasional 2 Mei 2023."
+                onclick="openCertModal(this)"
+                class="mt-auto brutalism-btn bg-brutalism-yellow text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
+              >
+                Detail
+              </button>
             </div>
-            <button
-              data-title="Juara 2 Lomba Video Inspiratif"
-              data-badge="Amalia Islamic School - 2023"
-              data-desc="Juara 2 Lomba Video Inspiratif memperingati Hari Pendidikan Nasional 2 Mei 2023."
-              onclick="openCertModal(this)"
-              class="brutalism-btn bg-brutalism-yellow text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
-            >
-              Detail
-            </button>
           </div>
         </div>
       </div>
@@ -1278,157 +1198,142 @@
     >
       <div class="container mx-auto px-4 sm:px-6">
         <h2
-          class="text-3xl sm:text-4xl md:text-6xl font-black mb-16 text-center uppercase tracking-tighter reveal reveal-up"
+          class="text-3xl sm:text-4xl md:text-6xl font-black mb-12 sm:mb-16 text-center uppercase tracking-tighter reveal reveal-up"
         >
           <span
             class="bg-white text-black px-8 py-3 border-4 border-black shadow-brutalism-lg inline-block transform -rotate-1 hover:rotate-1 transition-transform duration-300 cursor-default rounded-md"
             >Hubungi Saya</span
           >
         </h2>
+
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-start"
         >
-          <div
-            class="md:col-span-2 lg:col-span-2 md:row-span-2 bg-white border-4 border-black shadow-brutalism p-8 md:p-12 flex flex-col items-center justify-center text-center reveal reveal-up rounded-md"
-          >
-            <img
-              src="https://api.iconify.design/noto:envelope.svg"
-              width="100px"
-              class="mb-6 animate-float"
-              alt="Mail Envelope"
-            />
-            <h3
-              class="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter"
-              data-translate="contact-cta-title"
-            >
-              Let's Connect
-            </h3>
-            <p class="font-bold text-black mb-8 text-base md:text-lg max-w-md">
-              Saya selalu terbuka untuk mendiskusikan peluang kerja sama,
-              kolaborasi, atau sekadar berbagi cerita.
-            </p>
-            <a
-              href="mailto:muhamadadrian2507@gmail.com"
-              class="brutalism-btn px-8 py-5 bg-brutalism-purple text-white font-black uppercase text-xl md:text-2xl w-full sm:w-auto flex items-center justify-center gap-3 hover:-translate-y-2 transition-transform border-4 border-black shadow-brutalism-lg rounded-md"
-            >
-              <span
-                class="iconify text-3xl"
-                data-icon="mdi:send-outline"
-              ></span>
-              Kirim Email
-            </a>
-          </div>
-
-          <!-- Location -->
-          <div
-            class="bg-brutalism-pink border-4 border-black shadow-brutalism p-6 flex flex-col items-center justify-center text-center hover:scale-[1.02] transition-transform reveal reveal-right rounded-md"
-          >
+          <div class="flex flex-col gap-6 reveal reveal-left">
             <div
-              class="w-14 h-14 border-4 border-black bg-white flex items-center justify-center mb-4 rounded-full"
+              class="bg-white border-4 border-black shadow-brutalism p-8 flex flex-col items-start justify-center rounded-md"
             >
-              <img
-                src="https://api.iconify.design/ic:baseline-location-on.svg"
-                alt="Location Icon"
-                width="28px"
-              />
-            </div>
-            <h4
-              class="text-lg font-black mb-1 uppercase"
-              data-translate="contact-location-title"
-            >
-              Location
-            </h4>
-            <p class="text-black font-bold">Bogor, Indonesia</p>
-          </div>
-
-          <!-- Phone -->
-          <div
-            class="bg-brutalism-yellow border-4 border-black shadow-brutalism p-6 flex flex-col items-center justify-center text-center hover:scale-[1.02] transition-transform reveal reveal-right delay-100 rounded-md"
-          >
-            <div
-              class="w-14 h-14 border-4 border-black bg-white flex items-center justify-center mb-4 rounded-full"
-            >
-              <img
-                src="https://api.iconify.design/ic:baseline-phone.svg"
-                alt="Phone Icon"
-                width="28px"
-              />
-            </div>
-            <h4
-              class="text-lg font-black mb-1 uppercase"
-              data-translate="contact-phone-title"
-            >
-              Phone
-            </h4>
-            <p class="text-black font-bold">+62 812-8906-5257</p>
-          </div>
-
-          <!-- Email & Socials -->
-          <div
-            class="md:col-span-2 lg:col-span-3 bg-brutalism-blue border-4 border-black shadow-brutalism p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal reveal-up delay-200 rounded-md"
-          >
-            <div
-              class="flex items-center gap-4 text-center md:text-left flex-col md:flex-row"
-            >
-              <div
-                class="w-16 h-16 border-4 border-black bg-white flex items-center justify-center rounded-full shrink-0 mx-auto md:mx-0"
+              <h3
+                class="text-3xl md:text-4xl font-black mb-2 uppercase tracking-tighter"
+                data-translate="contact-cta-title"
               >
-                <img
-                  src="https://api.iconify.design/ic:baseline-email.svg"
-                  alt="Email Icon"
-                  width="32px"
-                />
-              </div>
-              <div>
-                <h4
-                  class="text-xl font-black uppercase"
-                  data-translate="contact-email-title"
+                Let's Connect
+              </h3>
+              <p class="font-bold text-black mb-6 text-base max-w-md">
+                Saya terbuka untuk peluang kerja sama, kolaborasi, atau sekadar
+                berdiskusi. Silakan tinggalkan pesan!
+              </p>
+
+              <div class="w-full flex flex-col gap-4">
+                <div
+                  class="flex items-center gap-4 bg-brutalism-pink border-4 border-black p-4 rounded-md"
                 >
-                  Direct Email
-                </h4>
-                <p class="text-black font-bold text-sm md:text-base break-all">
-                  muhamadadrian2507@gmail.com
-                </p>
+                  <div
+                    class="w-12 h-12 bg-white border-4 border-black rounded-full flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="iconify text-xl"
+                      data-icon="ic:baseline-location-on"
+                    ></span>
+                  </div>
+                  <div>
+                    <h4 class="font-black uppercase text-sm">Lokasi</h4>
+                    <p class="font-bold text-black text-sm">Bogor, Indonesia</p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center gap-4 bg-brutalism-yellow border-4 border-black p-4 rounded-md"
+                >
+                  <div
+                    class="w-12 h-12 bg-white border-4 border-black rounded-full flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="iconify text-xl"
+                      data-icon="ic:baseline-phone"
+                    ></span>
+                  </div>
+                  <div>
+                    <h4 class="font-black uppercase text-sm">Telepon / WA</h4>
+                    <p class="font-bold text-black text-sm">
+                      +62 812-8906-5257
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-4 justify-center">
-              <a
-                href="https://wa.me/6281289065257"
-                target="_blank"
-                class="w-14 h-14 bg-brutalism-green border-4 border-black shadow-brutalism flex items-center justify-center hover:-translate-y-1 transition-transform text-black rounded-md"
-                title="WhatsApp"
-              >
-                <img
-                  src="https://api.iconify.design/mdi:whatsapp.svg"
-                  width="32px"
-                  alt="WhatsApp Icon"
+          </div>
+
+          <div
+            class="bg-brutalism-blue border-4 border-black shadow-brutalism p-6 md:p-8 rounded-md reveal reveal-right"
+          >
+            <form
+              action="https://formsubmit.co/muhamadadrian2507@gmail.com"
+              method="POST"
+              class="flex flex-col gap-6"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Pesan Baru dari Portofolio!"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <div class="relative pt-2">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent"
+                  placeholder="Nama Anda"
+                  required
                 />
-              </a>
-              <a
-                href="https://github.com/rimurujk"
-                target="_blank"
-                class="w-14 h-14 bg-white border-4 border-black shadow-brutalism flex items-center justify-center hover:-translate-y-1 transition-transform rounded-md"
-                title="GitHub"
-              >
-                <img
-                  src="https://api.iconify.design/mdi:github.svg"
-                  width="32px"
-                  alt="GitHub Icon"
+                <label
+                  for="name"
+                  class="absolute left-4 top-6 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-yellow peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none bg-brutalism-yellow border-4 border-black rounded-md shadow-brutalism -top-2"
+                  >Nama Lengkap</label
+                >
+              </div>
+
+              <div class="relative pt-2">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent"
+                  placeholder="Email Anda"
+                  required
                 />
-              </a>
-              <a
-                href="https://www.instagram.com/adriannn.jk"
-                target="_blank"
-                class="w-14 h-14 bg-brutalism-pink border-4 border-black shadow-brutalism flex items-center justify-center hover:-translate-y-1 transition-transform text-white rounded-md"
-                title="Instagram"
+                <label
+                  for="email"
+                  class="absolute left-4 top-6 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-pink peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-focus:text-white peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none peer-placeholder-shown:text-black bg-brutalism-pink text-white border-4 border-black rounded-md shadow-brutalism -top-2"
+                  >Alamat Email</label
+                >
+              </div>
+
+              <div class="relative pt-2">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent resize-none"
+                  placeholder="Pesan Anda"
+                  required
+                ></textarea>
+                <label
+                  for="message"
+                  class="absolute left-4 top-6 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-green peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none bg-brutalism-green border-4 border-black rounded-md shadow-brutalism -top-2"
+                  >Tulis Pesan</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="brutalism-btn mt-2 bg-brutalism-purple text-white font-black uppercase text-xl py-4 w-full flex items-center justify-center gap-3 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-y-[6px] active:translate-x-[6px] transition-all rounded-md"
               >
-                <img
-                  src="https://api.iconify.design/mdi:instagram.svg"
-                  width="32px"
-                  alt="Instagram Icon"
-                />
-              </a>
-            </div>
+                <span class="iconify text-3xl" data-icon="mdi:send"></span>
+                Kirim Sekarang
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -1487,11 +1392,13 @@
 
     <footer class="py-12 bg-black/90 text-white border-t-8 border-black/90">
       <div class="container mx-auto px-4 sm:px-6">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-8 md:mb-0">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <div class="text-center md:text-left">
             <a
               href="#"
-              class="text-2xl sm:text-3xl font-black uppercase tracking-tighter"
+              class="text-2xl sm:text-3xl font-black uppercase tracking-tighter block mb-2"
             >
               Muhammad
               <span
@@ -1499,10 +1406,71 @@
                 >Adrian</span
               >
             </a>
+            <p class="font-bold text-sm text-gray-300">
+              Data Processor & Web Developer
+            </p>
           </div>
 
-          <div class="text-white font-bold uppercase text-xs">
-            © <span id="current-year">2026</span> Muhammad Adrian.
+          <!-- Deretan Icon Sosmed -->
+          <div class="flex gap-4 justify-center flex-wrap">
+            <a
+              href="https://wa.me/6281289065257"
+              target="_blank"
+              class="w-12 h-12 bg-brutalism-green border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
+              title="WhatsApp"
+            >
+              <img
+                src="https://api.iconify.design/mdi:whatsapp.svg"
+                width="28px"
+                alt="WhatsApp Icon"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/muhamad-adrian-4a76243a6/"
+              target="_blank"
+              class="w-12 h-12 bg-brutalism-blue border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
+              title="LinkedIn"
+            >
+              <img
+                src="https://api.iconify.design/mdi:linkedin.svg"
+                width="28px"
+                alt="LinkedIn Icon"
+              />
+            </a>
+
+            <a
+              href="https://github.com/rimurujk"
+              target="_blank"
+              class="w-12 h-12 bg-brutalism-purple border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
+              title="GitHub"
+            >
+              <img
+                src="https://api.iconify.design/mdi:github.svg"
+                width="28px"
+                alt="GitHub Icon"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/adriannn.jk"
+              target="_blank"
+              class="w-12 h-12 bg-brutalism-pink border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
+              title="Instagram"
+            >
+              <img
+                src="https://api.iconify.design/mdi:instagram.svg"
+                width="28px"
+                alt="Instagram Icon"
+              />
+            </a>
+          </div>
+
+          <div
+            class="text-white font-bold uppercase text-xs text-center md:text-right"
+          >
+            © <span id="current-year">2026</span> Muhammad Adrian.<br />
+            All Rights Reserved.
           </div>
         </div>
       </div>
