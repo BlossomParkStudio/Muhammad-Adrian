@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Translations implementation
-  const langToggle = document.getElementById('lang-toggle');
-  if (langToggle) {
-    langToggle.addEventListener('click', () => {
+  const langToggles = document.querySelectorAll('.lang-toggle-btn');
+  langToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
       const currentLang = localStorage.getItem('lang') || 'id';
       const newLang = currentLang === 'id' ? 'en' : 'id';
       localStorage.setItem('lang', newLang);
       applyTranslations(newLang);
     });
-  }
+  });
 
   // Load Translations
   fetch('assets/data/translations.json')
@@ -105,10 +105,9 @@ function applyTranslations(lang) {
   });
 
   // 4. Update toggle button text
-  const langText = document.querySelector('#lang-toggle .lang-text');
-  if (langText) {
+  document.querySelectorAll('.lang-toggle-btn .lang-text').forEach(langText => {
     langText.textContent = lang === 'id' ? 'EN' : 'ID';
-  }
+  });
 
   // 5. Re-run typing effect
   const devTitle = document.getElementById('dev-title');
