@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Translations implementation
+  // Translations
   const langToggles = document.querySelectorAll('.lang-toggle-btn');
   langToggles.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => {
       console.error('Error loading translations:', err);
-      // Fallback typing effect if translation load fails
       typeEffect(document.getElementById('dev-title'), "Data Processor", 70, 0);
     });
 });
@@ -190,7 +189,7 @@ window.closeCertModal = function () {
   }, 300);
 };
 
-// Menutup modal jika area luar diklik
+// Close modal
 document.addEventListener('DOMContentLoaded', () => {
   const certModal = document.getElementById('certModal');
   if (certModal) {
