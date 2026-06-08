@@ -263,7 +263,7 @@
             <a
               href="#certificates"
               class="nav-link py-2 text-sm lg:text-base font-bold text-black hover:bg-brutalism-purple px-2 transition-all"
-              data-translate="nav-skills"
+              data-translate="nav-certificates"
               >Sertifikat</a
             >
             <a
@@ -274,12 +274,12 @@
             >
           </nav>
           <div class="flex items-center gap-4">
-            <!-- <button
+            <button
               id="lang-toggle"
               class="brutalism-btn px-4 py-2 bg-brutalism-purple text-white rounded-md"
             >
               <span class="lang-text">EN</span>
-            </button> -->
+            </button>
             <button
               id="mobile-menu-button"
               class="md:hidden text-black focus:outline-none"
@@ -324,7 +324,7 @@
           <a
             href="#certificates"
             class="block py-2 font-bold text-black hover:bg-brutalism-purple px-2"
-            data-translate="nav-skills"
+            data-translate="nav-certificates"
             >Sertifikat</a
           >
           <a
@@ -365,21 +365,33 @@
           Halo, Saya
         </p>
         <h1
-          class="text-4xl sm:text-6xl md:text-8xl font-black mb-6 text-black uppercase tracking-tighter"
+          class="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 text-black uppercase tracking-tighter"
         >
           <div class="relative inline-block animate-slide-down-rope">
             <span
               class="bg-white rounded-md px-6 py-2 border-4 border-black shadow-brutalism-xl inline-block transform -rotate-2 hover:rotate-2 transition-transform duration-300 cursor-default relative"
               id="dev-name"
             >
+              <div
+                class="absolute top-0 left-8 w-1 h-[1000px] bg-black -translate-y-full -z-10 hidden md:block"
+              ></div>
+              <div
+                class="absolute top-0 right-8 w-1 h-[1000px] bg-black -translate-y-full -z-10 hidden md:block"
+              ></div>
+              <div
+                class="absolute top-1 left-7 w-3 h-3 bg-black rounded-full hidden md:block"
+              ></div>
+              <div
+                class="absolute top-1 right-7 w-3 h-3 bg-black rounded-full hidden md:block"
+              ></div>
               Muhammad Adrian
             </span>
           </div>
         </h1>
         <h2
-          class="text-2xl rounded-md sm:text-3xl md:text-4xl font-black mb-8 text-black animate-slide-up bg-brutalism-pink inline-block px-4 py-2 border-4 border-black shadow-brutalism transform rotate-1 hover:-rotate-1 transition-transform duration-300 cursor-default"
+          class="text-2xl rounded-md sm:text-3xl md:text-4xl font-bold mb-8 text-white animate-slide-up bg-brutalism-pink inline-block px-4 py-2 border-4 border-black shadow-brutalism transform rotate-1 hover:-rotate-1 transition-transform duration-300 cursor-default"
         >
-          <span class="typing-text" id="dev-title">DATA PROCESSOR</span>
+          <span class="typing-text" id="dev-title">Data Processor</span>
         </h2>
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 animate-slide-up"
@@ -409,11 +421,7 @@
               class="brutalism-btn w-14 h-14 bg-brutalism-purple flex items-center justify-center text-white rounded-md"
               title="GitHub"
             >
-              <img
-                src="https://api.iconify.design/mdi:github.svg"
-                width="32px"
-                alt="GitHub Icon"
-              />
+              <span class="iconify text-[32px]" data-icon="mdi:github"></span>
             </a>
             <a
               href="https://www.instagram.com/adriannn.jk"
@@ -421,11 +429,10 @@
               class="brutalism-btn w-14 h-14 bg-brutalism-pink flex items-center justify-center text-white rounded-md"
               title="Instagram"
             >
-              <img
-                src="https://api.iconify.design/mdi:instagram.svg"
-                width="32px"
-                alt="Instagram Icon"
-              />
+              <span
+                class="iconify text-[32px]"
+                data-icon="mdi:instagram"
+              ></span>
             </a>
           </div>
         </div>
@@ -437,80 +444,107 @@
       class="py-16 sm:py-24 md:py-32 scroll-mt-16 bg-white border-b-8 border-black"
     >
       <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        <h2
+          class="text-3xl sm:text-4xl md:text-5xl font-black mb-10 text-center uppercase tracking-tighter reveal reveal-up"
+        >
+          <span
+            class="bg-brutalism-pink text-white px-6 py-2 border-4 border-black shadow-brutalism-lg inline-block transform rotate-2 hover:-rotate-2 transition-transform duration-300 cursor-default"
+            data-translate="about-title"
+            >Tentang Saya</span
+          >
+        </h2>
         <div
-          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+          class="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-6 items-center"
         >
           <div class="lg:col-span-5 relative reveal reveal-left">
-            <div
-              class="absolute top-4 left-4 w-full h-full bg-brutalism-pink border-4 border-black rounded-md"
-            ></div>
-            <div
-              class="relative bg-white border-4 border-black p-4 shadow-brutalism-lg rounded-md z-10"
-            >
-              <div
-                class="aspect-4/5 w-full overflow-hidden border-4 border-black bg-brutalism-bg rounded-md"
-              >
-                <img
-                  src="./assets/images/madrian.png"
+            <div class="w-full flex justify-center reveal reveal-left">
+              <div class="relative">
+                <div
                   id="about-img-container"
-                  alt="Foto Profil"
-                  class="w-full h-full object-cover object-center"
-                />
+                  class="w-72 h-72 sm:w-72 sm:h-72 overflow-hidden border-8 border-black shadow-brutalism-xl transform -rotate-3 cursor-pointer transition-transform duration-300 ease-in-out"
+                >
+                  <img
+                    src="./assets/images/madrian.png"
+                    alt="Foto Profil"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+                <div
+                  class="absolute -bottom-6 -right-6 w-24 h-24 bg-brutalism-yellow border-4 border-black rounded-md flex items-center justify-center animate-spin-slow shadow-brutalism"
+                ></div>
               </div>
-              <div
-                class="absolute -bottom-6 -right-6 w-24 h-24 bg-brutalism-yellow border-4 border-black rounded-md flex items-center justify-center animate-spin-slow shadow-brutalism"
-              ></div>
             </div>
           </div>
 
           <div class="lg:col-span-7 lg:pl-10 reveal reveal-right delay-200">
-            <h2
-              class="text-5xl sm:text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter text-black leading-none"
-              data-translate="about-title"
-            >
-              Tentang <span class="text-brutalism-blue">Saya</span>
-            </h2>
-
             <h3
-              class="text-xl sm:text-2xl font-bold mb-6 text-black uppercase tracking-tight border-l-8 border-brutalism-pink pl-6 py-2"
+              class="text-xl sm:text-3xl font-bold mb-6 text-black uppercase tracking-tight py-2"
+              data-translate="about-intro"
             >
               Saya
-              <span class="bg-brutalism-yellow px-2">Muhammad Adrian</span>,
-              Lulusan SMK Jurusan Rekayasa Perangkat Lunak.
+              <span class="text-brutalism-blue">Muhammad Adrian</span>,
+              <span class="bg-brutalism-green"
+                >Lulusan SMK Jurusan Rekayasa Perangkat Lunak.</span
+              >
             </h3>
 
             <p
-              class="text-black font-medium mb-10 leading-relaxed text-base md:text-lg opacity-90 max-w-2xl text-justify"
+              class="text-black border-l-8 border-brutalism-pink pl-6 font-medium mb-10 leading-relaxed text-base opacity-90 max-w-2xl text-justify"
               data-translate="about-desc2"
             >
-              Saya adalah lulusan SMK jurusan Rekayasa Perangkat Lunak yang
-              memadukan ketelitian teknis dengan solusi digital yang kreatif.
-              Dengan landasan yang kokoh dalam manajemen data operasional,
-              pemantauan real-time, saya memastikan akurasi dan efisiensi dalam
-              setiap sistem yang saya tangani. Keahlian utama saya adalah
-              mengembangkan situs web modern, terus mengeksplorasi dan
-              mengintegrasikan teknologi terkini. Saya juga seorang editor video
-              yang antusias dan senang mewujudkan konsep visual di TikTok dan
-              YouTube.
+              Saya lulusan SMK jurusan Rekayasa Perangkat Lunak yang memadukan
+              ketelitian teknis dengan solusi digital yang kreatif. Dengan dasar
+              yang kuat dalam manajemen data operasional dan pemantauan
+              real-time, saya memastikan akurasi serta efisiensi di setiap
+              sistem yang saya bangun. Keahlian utama saya adalah mengembangkan
+              situs web modern, serta terus mengeksplorasi dan mengintegrasikan
+              teknologi terkini. Selain itu, saya juga memiliki kemampuan di
+              bidang desain grafis dan editing video. Saya antusias dalam
+              mewujudkan konsep visual menjadi konten yang menarik, baik dalam
+              bentuk gambar, ilustrasi, maupun potongan video.
             </p>
 
             <div class="grid grid-cols-2 gap-2 sm:gap-4 max-w-lg mb-10">
               <!-- Location -->
-              <div class="flex items-center gap-2 sm:gap-3 bg-white border-4 border-black shadow-brutalism px-2 py-2 sm:px-4 sm:py-3 rounded-md cursor-default">
-                <span class="iconify text-xl sm:text-2xl text-brutalism-pink shrink-0" data-icon="ic:baseline-location-on"></span>
-                <span class="font-bold text-[11px] sm:text-sm text-black leading-tight">Bogor,<br>Indonesia</span>
+              <div
+                class="flex items-center gap-2 sm:gap-3 bg-white border-4 border-black shadow-brutalism px-2 py-2 sm:px-4 sm:py-3 rounded-md cursor-default"
+              >
+                <span
+                  class="iconify text-xl sm:text-2xl text-brutalism-pink shrink-0"
+                  data-icon="ic:baseline-location-on"
+                ></span>
+                <span
+                  class="font-bold text-[11px] sm:text-sm text-black leading-tight"
+                  >Bogor,<wbr />Indonesia</span
+                >
               </div>
 
               <!-- Email -->
-              <a href="mailto:muhamadadrian2507@gmail.com" class="flex items-center gap-2 sm:gap-3 bg-white border-4 border-black shadow-brutalism px-2 py-2 sm:px-4 sm:py-3 rounded-md group hover:-translate-y-1 transition-transform overflow-hidden">
-                <span class="iconify text-xl sm:text-2xl text-brutalism-blue shrink-0 group-hover:animate-bounce" data-icon="ic:baseline-email"></span>
-                <span class="font-bold text-[11px] sm:text-sm text-black leading-tight break-words">muhamadadrian<wbr>2507<wbr>@gmail.com</span>
+              <a
+                href="mailto:muhamadadrian2507@gmail.com"
+                class="flex items-center gap-2 sm:gap-3 bg-white border-4 border-black shadow-brutalism px-2 py-2 sm:px-4 sm:py-3 rounded-md group hover:-translate-y-1 transition-transform overflow-hidden"
+              >
+                <span
+                  class="iconify text-xl sm:text-2xl text-brutalism-blue shrink-0 group-hover:animate-bounce"
+                  data-icon="ic:baseline-email"
+                ></span>
+                <span
+                  class="font-bold text-[11px] sm:text-sm text-black leading-tight break-words"
+                  >muhamadadrian<wbr />2507<wbr />@gmail.com</span
+                >
               </a>
 
-              <!-- Rekrut Saya / Unduh CV Button -->
-              <a href="#contact" class="col-span-2 flex items-center justify-center gap-2 sm:gap-3 bg-white text-black font-black uppercase text-base sm:text-lg border-4 border-black shadow-brutalism p-3 sm:p-4 rounded-md hover:-translate-y-1 hover:shadow-brutalism-lg transition-all group mt-2">
-                <span class="iconify text-xl sm:text-2xl text-black" data-icon="mdi:send"></span>
-                <span data-translate="about-hire">REKRUT SAYA</span>
+              <!-- Lihat CV Saya -->
+              <a
+                href="./assets/doc/CV.pdf"
+                target="_blank"
+                class="col-span-2 flex items-center justify-center gap-2 sm:gap-3 bg-white text-black font-black uppercase text-base sm:text-lg border-4 border-black shadow-brutalism p-3 sm:p-4 rounded-md hover:-translate-y-1 hover:shadow-brutalism-lg transition-all group mt-2"
+              >
+                <span
+                  class="iconify text-xl sm:text-2xl text-black"
+                  data-icon="mdi:eye"
+                ></span>
+                <span data-translate="about-hire">Lihat <wbr />CV Saya</span>
               </a>
             </div>
           </div>
@@ -570,25 +604,33 @@
                 <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
                     class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
+                    data-translate="project-1-title"
                   >
                     Profile Website
                   </h3>
                   <p
-                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
+                    class="text-black text-justify font-bold mb-6 text-sm"
+                    data-translate="project-1-desc"
                   >
-                    Website Profile yang dirancang dengan Google Sites.
+                    Website profil pribadi yang dirancang menggunakan Google
+                    Sites sebagai proyek awal belajar pengembangan web. Saya
+                    belajar menyusun struktur informasi, menata konten secara
+                    rapi, serta memahami pentingnya pengalaman pengguna dalam
+                    membangun sebuah website.
                   </p>
                   <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-source-code"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-visit"
                       >Kunjungi</a
                     >
                   </div>
@@ -609,27 +651,33 @@
                 <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
                     class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
+                    data-translate="project-2-title"
                   >
                     Digital Lib
                   </h3>
                   <p
-                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
+                    class="text-black text-justify font-bold mb-6 text-sm"
+                    data-translate="project-2-desc"
                   >
-                    Web-based Digital Library. Platform manajemen perpustakaan
-                    terintegrasi untuk eksplorasi katalog buku. Dibuat
-                    menggunakan Laravel.
+                    Platform manajemen perpustakaan digital berbasis web yang
+                    memungkinkan eksplorasi katalog buku, pencarian judul, serta
+                    pengelolaan koleksi. Dibangun dengan framework Laravel dan
+                    database MySQL. Melatih pemahaman arsitektur MVC, routing,
+                    dan autentikasi dasar pengguna.
                   </p>
                   <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-source-code"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-visit"
                       >Kunjungi</a
                     >
                   </div>
@@ -650,28 +698,33 @@
                 <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
                     class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
+                    data-translate="project-3-title"
                   >
                     Web-based POS
                   </h3>
                   <p
-                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
+                    class="text-black text-justify font-bold mb-6 text-sm"
+                    data-translate="project-3-desc"
                   >
-                    Aplikasi Point of Sale (POS) berbasis web yang dirancang
-                    untuk mengelola proses transaksi, manajemen inventaris, dan
-                    pelacakan laporan penjualan. Yang dibuat menggunakan
-                    Laravel.
+                    Aplikasi Point of Sale berbasis web untuk mengelola
+                    transaksi penjualan, inventaris barang, dan laporan
+                    pendapatan. Fitur utama meliputi input transaksi, pencarian
+                    produk, perhitungan otomatis, serta pencetakan struk
+                    sederhana untuk simulasi usaha retail.
                   </p>
                   <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-source-code"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-visit"
                       >Kunjungi</a
                     >
                   </div>
@@ -685,36 +738,40 @@
                 >
                   <img
                     src="assets/images/project-4.jpeg"
-                    alt="Script Import Excel Otomatis"
+                    alt="Script Import Excel"
                     class="w-full h-full object-contain"
                   />
                 </div>
                 <div class="p-5 md:p-6 bg-white flex flex-col flex-1">
                   <h3
                     class="text-xl md:text-2xl font-black mb-4 text-black uppercase tracking-tight"
+                    data-translate="project-4-title"
                   >
-                    Script Import Excel Otomatis
+                    Script Import Excel
                   </h3>
                   <p
-                    class="text-black font-bold mb-6 text-sm text-left leading-relaxed line-clamp-3"
+                    class="text-black text-justify font-bold mb-6 text-sm"
+                    data-translate="project-4-desc"
                   >
-                    Berhasil mengimplementasikan dan mengelola skrip otomatisasi
-                    pada platform iBoss untuk mengoptimalkan efisiensi kerja.
-                    Berperan dalam mempercepat proses penanganan data/jaringan,
-                    meminimalkan human error, serta memastikan seluruh sistem
-                    operasional berjalan sesuai dengan prosedur yang ditentukan.
+                    Berhasil mengimplementasikan script otomatisasi import data
+                    Excel pada platform iBoss untuk mengoptimalkan efisiensi
+                    kerja. Proses input data yang sebelumnya manual dan memakan
+                    waktu kini berjalan otomatis, cepat, dan akurat. Berperan
+                    aktif dalam mempercepat alur kerja tim secara signifikan.
                   </p>
                   <div class="flex gap-4 pt-2 mt-auto">
                     <a
                       href="javascript:void(0)"
                       onclick="showPrivateAlert()"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-yellow text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-source-code"
                       >Source Code</a
                     >
                     <a
                       href="#"
                       target="_blank"
                       class="brutalism-btn flex-1 py-2 md:py-3 bg-brutalism-green text-center text-sm md:text-base border-4 border-black shadow-brutalism"
+                      data-translate="project-visit"
                       >Kunjungi</a
                     >
                   </div>
@@ -823,7 +880,10 @@
               >
                 <span class="iconify" data-icon="mdi:palette"></span>
               </div>
-              <div class="font-black text-sm uppercase group-hover:text-white">
+              <div
+                class="font-black text-sm uppercase group-hover:text-white"
+                data-translate="skill-graphic-design"
+              >
                 Desain Grafis
               </div>
             </div>
@@ -835,7 +895,10 @@
               >
                 <span class="iconify" data-icon="mdi:video-vintage"></span>
               </div>
-              <div class="font-black text-sm uppercase group-hover:text-white">
+              <div
+                class="font-black text-sm uppercase group-hover:text-white"
+                data-translate="skill-video-editing"
+              >
                 Video Editing
               </div>
             </div>
@@ -961,7 +1024,10 @@
               >
                 <span class="iconify" data-icon="mdi:palette"></span>
               </div>
-              <div class="font-black text-sm uppercase group-hover:text-white">
+              <div
+                class="font-black text-sm uppercase group-hover:text-white"
+                data-translate="skill-graphic-design"
+              >
                 Desain Grafis
               </div>
             </div>
@@ -973,7 +1039,10 @@
               >
                 <span class="iconify" data-icon="mdi:video-vintage"></span>
               </div>
-              <div class="font-black text-sm uppercase group-hover:text-white">
+              <div
+                class="font-black text-sm uppercase group-hover:text-white"
+                data-translate="skill-video-editing"
+              >
                 Video Editing
               </div>
             </div>
@@ -1031,6 +1100,7 @@
         >
           <span
             class="bg-white text-black px-8 py-3 border-4 border-black shadow-brutalism-lg inline-block transform rotate-1 hover:-rotate-1 transition-transform duration-300 cursor-default rounded-md"
+            data-translate="certificates-title"
           >
             Sertifikat
           </span>
@@ -1054,7 +1124,11 @@
               <button
                 data-title="Sertifikat Magang PT Jala Lintas Media"
                 data-badge="PT Jala Lintas Media - 2025"
-                data-desc="Sertifikat tanda bukti telah menyelesaikan program magang sebagai Staf Dismantle, dengan pencapaian penghargaan 'Best Performance Staff Dismantle' periode 2024-2025."
+                data-desc="Sertifikat tanda bukti telah menyelesaikan program magang sebagai Staff Dismantle dengan meraih penghargaan Best Performance Staff Dismantle periode 2024-2025."
+                data-translate-title="cert-1-title"
+                data-translate-badge="cert-1-badge"
+                data-translate-desc="cert-1-desc"
+                data-translate="cert-detail"
                 onclick="openCertModal(this)"
                 class="mt-auto brutalism-btn bg-brutalism-blue text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
               >
@@ -1080,7 +1154,11 @@
               <button
                 data-title="Surat Keterangan Magang"
                 data-badge="PT Omega Digital Global - 2025"
-                data-desc="Dokumen resmi yang menerangkan kontribusi nyata dalam pemantauan data operasional, penggunaan platform iBOSS, dan validasi perangkat."
+                data-desc="Dokumen resmi yang menerangkan kontribusi nyata dalam pemantauan data operasional, penggunaan platform iBOSS, serta validasi perangkat."
+                data-translate-title="cert-2-title"
+                data-translate-badge="cert-2-badge"
+                data-translate-desc="cert-2-desc"
+                data-translate="cert-detail"
                 onclick="openCertModal(this)"
                 class="mt-auto brutalism-btn bg-brutalism-purple text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
               >
@@ -1103,6 +1181,10 @@
                 data-title="Sertifikasi Kompetensi BNSP"
                 data-badge="BNSP - Skema Programmer"
                 data-desc="Sertifikasi kompetensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP) yang menyatakan status kompeten dalam skema pekerjaan Programmer."
+                data-translate-title="cert-3-title"
+                data-translate-badge="cert-3-badge"
+                data-translate-desc="cert-3-desc"
+                data-translate="cert-detail"
                 onclick="openCertModal(this)"
                 class="mt-auto brutalism-btn bg-brutalism-green text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
               >
@@ -1129,6 +1211,10 @@
                 data-title="Sertifikat TOEIC (CECRL)"
                 data-badge="TOEIC"
                 data-desc="Sertifikat pencapaian penguasaan Bahasa Inggris berdasarkan standar Test of English for International Communication (TOEIC) - CECRL."
+                data-translate-title="cert-4-title"
+                data-translate-badge="cert-4-badge"
+                data-translate-desc="cert-4-desc"
+                data-translate="cert-detail"
                 onclick="openCertModal(this)"
                 class="mt-auto brutalism-btn bg-white text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
               >
@@ -1155,6 +1241,10 @@
                 data-title="Juara 2 Lomba Web Jurnalistik"
                 data-badge="Amalia Islamic School - 2023"
                 data-desc="Juara 2 lomba Web Jurnalistik memperingati Hari Pers Nasional 9 Februari 2023."
+                data-translate-title="cert-5-title"
+                data-translate-badge="cert-5-badge"
+                data-translate-desc="cert-5-desc"
+                data-translate="cert-detail"
                 onclick="openCertModal(this)"
                 class="mt-auto brutalism-btn bg-brutalism-pink text-white font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
               >
@@ -1181,6 +1271,10 @@
                 data-title="Juara 2 Lomba Video Inspiratif"
                 data-badge="Amalia Islamic School - 2023"
                 data-desc="Juara 2 Lomba Video Inspiratif memperingati Hari Pendidikan Nasional 2 Mei 2023."
+                data-translate-title="cert-6-title"
+                data-translate-badge="cert-6-badge"
+                data-translate-desc="cert-6-desc"
+                data-translate="cert-detail"
                 onclick="openCertModal(this)"
                 class="mt-auto brutalism-btn bg-brutalism-yellow text-black font-black uppercase py-3 text-center border-4 border-black shadow-brutalism rounded-md hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all w-full block cursor-pointer"
               >
@@ -1202,6 +1296,7 @@
         >
           <span
             class="bg-white text-black px-8 py-3 border-4 border-black shadow-brutalism-lg inline-block transform -rotate-1 hover:rotate-1 transition-transform duration-300 cursor-default rounded-md"
+            data-translate="contact-title"
             >Hubungi Saya</span
           >
         </h2>
@@ -1219,7 +1314,10 @@
               >
                 Let's Connect
               </h3>
-              <p class="font-bold text-black mb-6 text-base max-w-md">
+              <p
+                class="font-bold text-black mb-6 text-base max-w-md"
+                data-translate="contact-cta-desc"
+              >
                 Saya terbuka untuk peluang kerja sama, kolaborasi, atau sekadar
                 berdiskusi. Silakan tinggalkan pesan!
               </p>
@@ -1237,7 +1335,12 @@
                     ></span>
                   </div>
                   <div>
-                    <h4 class="font-black uppercase text-sm">Lokasi</h4>
+                    <h4
+                      class="font-black uppercase text-sm"
+                      data-translate="contact-location-title"
+                    >
+                      Lokasi
+                    </h4>
                     <p class="font-bold text-black text-sm">Bogor, Indonesia</p>
                   </div>
                 </div>
@@ -1254,9 +1357,37 @@
                     ></span>
                   </div>
                   <div>
-                    <h4 class="font-black uppercase text-sm">Telepon / WA</h4>
+                    <h4
+                      class="font-black uppercase text-sm"
+                      data-translate="contact-phone-title"
+                    >
+                      Telepon / WA
+                    </h4>
                     <p class="font-bold text-black text-sm">
                       +62 812-8906-5257
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 bg-brutalism-blue border-4 border-black p-4 rounded-md"
+                >
+                  <div
+                    class="w-12 h-12 bg-white border-4 border-black rounded-full flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="iconify text-xl"
+                      data-icon="ic:baseline-email"
+                    ></span>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-black uppercase text-sm"
+                      data-translate="contact-email-title"
+                    >
+                      Email
+                    </h4>
+                    <p class="font-bold text-black text-sm">
+                      muhammadadrian2507@gmail.com
                     </p>
                   </div>
                 </div>
@@ -1268,15 +1399,10 @@
             class="bg-brutalism-blue border-4 border-black shadow-brutalism p-6 md:p-8 rounded-md reveal reveal-right"
           >
             <form
-              action="https://formsubmit.co/muhamadadrian2507@gmail.com"
+              action="https://formsubmit.co/adit34072@gmail.com"
               method="POST"
               class="flex flex-col gap-6"
             >
-              <input
-                type="hidden"
-                name="_subject"
-                value="Pesan Baru dari Portofolio!"
-              />
               <input type="hidden" name="_captcha" value="false" />
               <div class="relative pt-2">
                 <input
@@ -1285,11 +1411,13 @@
                   id="name"
                   class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent"
                   placeholder="Nama Anda"
+                  data-translate-placeholder="form-name-placeholder"
                   required
                 />
                 <label
                   for="name"
-                  class="absolute left-4 top-6 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-yellow peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none bg-brutalism-yellow border-4 border-black rounded-md shadow-brutalism -top-2"
+                  class="absolute left-4 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-yellow peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none bg-brutalism-yellow border-4 border-black rounded-md shadow-brutalism -top-2"
+                  data-translate="form-name-label"
                   >Nama Lengkap</label
                 >
               </div>
@@ -1301,12 +1429,32 @@
                   id="email"
                   class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent"
                   placeholder="Email Anda"
+                  data-translate-placeholder="form-email-placeholder"
                   required
                 />
                 <label
                   for="email"
-                  class="absolute left-4 top-6 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-pink peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-focus:text-white peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none peer-placeholder-shown:text-black bg-brutalism-pink text-white border-4 border-black rounded-md shadow-brutalism -top-2"
+                  class="absolute left-4 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-pink peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-focus:text-white peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none peer-placeholder-shown:text-black bg-brutalism-pink border-4 border-black rounded-md shadow-brutalism -top-2"
+                  data-translate="form-email-label"
                   >Alamat Email</label
+                >
+              </div>
+
+              <div class="relative pt-2">
+                <input
+                  type="text"
+                  name="_subject"
+                  id="subject"
+                  class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent"
+                  placeholder="Subjek Pesan"
+                  data-translate-placeholder="form-subject-placeholder"
+                  required
+                />
+                <label
+                  for="subject"
+                  class="absolute left-4 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-yellow peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none bg-brutalism-yellow border-4 border-black rounded-md shadow-brutalism -top-2"
+                  data-translate="form-subject-label"
+                  >Subjek Pesan</label
                 >
               </div>
 
@@ -1317,11 +1465,13 @@
                   rows="4"
                   class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent resize-none"
                   placeholder="Pesan Anda"
+                  data-translate-placeholder="form-message-placeholder"
                   required
                 ></textarea>
                 <label
                   for="message"
-                  class="absolute left-4 top-6 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-green peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none bg-brutalism-green border-4 border-black rounded-md shadow-brutalism -top-2"
+                  class="absolute left-4 px-2 text-black font-black uppercase text-sm transition-all cursor-text peer-focus:cursor-default peer-focus:-top-2 peer-focus:bg-brutalism-green peer-focus:border-4 peer-focus:border-black peer-focus:rounded-md peer-focus:shadow-brutalism peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:border-transparent peer-placeholder-shown:shadow-none bg-brutalism-green border-4 border-black rounded-md shadow-brutalism -top-2"
+                  data-translate="form-message-label"
                   >Tulis Pesan</label
                 >
               </div>
@@ -1331,7 +1481,7 @@
                 class="brutalism-btn mt-2 bg-brutalism-purple text-white font-black uppercase text-xl py-4 w-full flex items-center justify-center gap-3 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-y-[6px] active:translate-x-[6px] transition-all rounded-md"
               >
                 <span class="iconify text-3xl" data-icon="mdi:send"></span>
-                Kirim Sekarang
+                <span data-translate="form-submit">Kirim Sekarang</span>
               </button>
             </form>
           </div>
@@ -1349,7 +1499,10 @@
         id="certModalContent"
       >
         <div class="flex justify-between items-center mb-4">
-          <h3 class="text-xl font-black text-black uppercase tracking-tighter">
+          <h3
+            class="text-xl font-black text-black uppercase tracking-tighter"
+            data-translate="modal-cert-detail-title"
+          >
             Detail Sertifikat
           </h3>
           <button
@@ -1384,6 +1537,7 @@
         <button
           onclick="closeCertModal()"
           class="brutalism-btn bg-brutalism-pink text-white font-black uppercase py-3 w-full border-4 border-black shadow-brutalism mt-6 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all block text-center cursor-pointer"
+          data-translate="modal-cert-close"
         >
           Tutup
         </button>
