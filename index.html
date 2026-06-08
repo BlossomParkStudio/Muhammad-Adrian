@@ -85,7 +85,7 @@
     <!-- awas awas mobil abang ganteng mau lewat, takut naksir -->
 
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
         --font-sans: "Inter", sans-serif;
@@ -223,7 +223,7 @@
       class="fixed top-0 left-0 right-0 w-screen z-50 bg-white border-b-4 border-black"
     >
       <div class="mx-auto px-4 sm:px-6 py-4">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-evenly items-center">
           <a
             href="#"
             class="text-xl sm:text-2xl font-black text-black uppercase tracking-tighter"
@@ -415,7 +415,7 @@
             target="_blank"
             class="brutalism-btn px-8 py-4 text-lg flex gap-2 items-center uppercase tracking-bold bg-brutalism-green text-black rounded-md"
           >
-            <img
+            <img loading="lazy"
               src="https://api.iconify.design/ic:baseline-whatsapp.svg"
               width="24px"
               alt="WhatsApp Icon"
@@ -449,7 +449,7 @@
 
     <section
       id="about"
-      class="py-16 sm:py-24 md:py-32 scroll-mt-16 bg-white border-b-8 border-black"
+      class="py-10 pb-2 sm:py-24 md:py-32 scroll-mt-16 bg-white border-b-8 border-black"
     >
       <div class="container mx-auto px-4 sm:px-6 relative z-10">
         <h2
@@ -462,16 +462,16 @@
           >
         </h2>
         <div
-          class="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-6 items-center"
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6 items-center"
         >
           <div class="lg:col-span-5 relative reveal reveal-left">
             <div class="w-full flex justify-center reveal reveal-left">
               <div class="relative">
                 <div
                   id="about-img-container"
-                  class="w-72 h-72 sm:w-72 sm:h-72 overflow-hidden border-8 border-black shadow-brutalism-xl transform -rotate-3 cursor-pointer transition-transform duration-300 ease-in-out"
+                  class="w-80 h-80 lg:w-96 lg:h-96 overflow-hidden border-8 border-black shadow-brutalism-xl transform -rotate-3 cursor-pointer transition-transform duration-300 ease-in-out"
                 >
-                  <img
+                  <img loading="lazy"
                     src="./assets/images/madrian.png"
                     alt="Foto Profil"
                     class="w-full h-full object-cover object-center"
@@ -543,7 +543,7 @@
               </a>
 
               <!-- Lihat CV Saya -->
-              <a
+              <!-- <a
                 href="./assets/doc/CV.pdf"
                 target="_blank"
                 class="col-span-2 flex items-center justify-center gap-2 sm:gap-3 bg-white text-black font-black uppercase text-base sm:text-lg border-4 border-black shadow-brutalism p-3 sm:p-4 rounded-md hover:-translate-y-1 hover:shadow-brutalism-lg transition-all group mt-2"
@@ -553,6 +553,16 @@
                   data-icon="mdi:eye"
                 ></span>
                 <span data-translate="about-hire">Lihat <wbr />CV Saya</span>
+              </a> -->
+              <a
+                href="#contact"
+                class="col-span-2 flex items-center justify-center gap-2 sm:gap-3 bg-white text-black font-black uppercase text-base sm:text-lg border-4 border-black shadow-brutalism p-3 sm:p-4 rounded-md hover:-translate-y-1 hover:shadow-brutalism-lg transition-all group mt-2"
+              >
+                <span
+                  class="iconify text-xl sm:text-2xl text-black"
+                  data-icon="mdi:send"
+                ></span>
+                <span data-translate="about-hire">Rekrut <wbr />Saya</span>
               </a>
             </div>
           </div>
@@ -603,7 +613,7 @@
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
-                  <img
+                  <img loading="lazy"
                     src="assets/images/project-1.jpeg"
                     alt="Profile Website"
                     class="w-full h-full object-contain"
@@ -650,7 +660,7 @@
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
-                  <img
+                  <img loading="lazy"
                     src="assets/images/project-2.jpeg"
                     alt="Digital Lib"
                     class="w-full h-full object-contain"
@@ -697,7 +707,7 @@
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
-                  <img
+                  <img loading="lazy"
                     src="assets/images/project-3.jpeg"
                     alt="Web-based POS"
                     class="w-full h-full object-contain"
@@ -744,7 +754,7 @@
                 <div
                   class="relative aspect-video overflow-hidden bg-black border-b-4 border-black"
                 >
-                  <img
+                  <img loading="lazy"
                     src="assets/images/project-4.jpeg"
                     alt="Script Import Excel"
                     class="w-full h-full object-contain"
@@ -1123,9 +1133,9 @@
               <div
                 class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
-                <img
+                <img loading="lazy"
                   src="./assets/images/sertifikat/pklomega.jpeg"
-                  alt=""
+                  alt="Keterangan Magang PT Jala Lintas Media"
                   class="w-full h-full object-cover"
                 />
               </div>
@@ -1153,7 +1163,7 @@
               <div
                 class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
-                <img
+                <img loading="lazy"
                   src="./assets/images/sertifikat/keteranganomega.jpeg"
                   alt=""
                   class="w-full h-full object-cover"
@@ -1183,7 +1193,7 @@
               <div
                 class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
-                <img src="" alt="" class="w-full h-full object-cover" />
+                <img loading="lazy" src="" alt="" class="w-full h-full object-cover" />
               </div>
               <button
                 data-title="Sertifikasi Kompetensi BNSP"
@@ -1209,7 +1219,7 @@
               <div
                 class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
-                <img
+                <img loading="lazy"
                   src="./assets/images/sertifikat/toeic.jpeg"
                   alt="Sertifikat TOEIC (CECRL)"
                   class="w-full h-full object-cover"
@@ -1239,7 +1249,7 @@
               <div
                 class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
-                <img
+                <img loading="lazy"
                   src="./assets/images/sertifikat/juara2webjurnal.jpeg"
                   alt="Juara 2 Lomba Web Jurnalistik"
                   class="w-full h-full object-cover"
@@ -1269,7 +1279,7 @@
               <div
                 class="border-4 border-black aspect-4/3 overflow-hidden rounded-sm bg-brutalism-bg mb-4"
               >
-                <img
+                <img loading="lazy"
                   src="./assets/images/sertifikat/juara2video.jpeg"
                   alt="Juara 2 Lomba Video Inspiratif"
                   class="w-full h-full object-cover"
@@ -1395,7 +1405,7 @@
                       Email
                     </h4>
                     <p class="font-bold text-black text-sm">
-                      muhamadadrian<wbr/>2507<wbr/>@gmail.com
+                      muhamadadrian<wbr />2507<wbr />@gmail.com
                     </p>
                   </div>
                 </div>
@@ -1406,10 +1416,7 @@
           <div
             class="bg-brutalism-blue border-4 border-black shadow-brutalism p-6 md:p-8 rounded-md reveal reveal-right"
           >
-            <form
-              id="contact-form"
-              class="flex flex-col gap-6"
-            >
+            <form id="contact-form" class="flex flex-col gap-6">
               <div class="relative pt-2">
                 <input
                   type="text"
@@ -1449,7 +1456,7 @@
               <div class="relative pt-2">
                 <input
                   type="text"
-                  name="_subject"
+                  name="subject"
                   id="subject"
                   class="peer w-full border-4 border-black p-4 text-black font-bold bg-white focus:outline-none focus:border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] focus:translate-y-1 focus:translate-x-1 transition-all placeholder-transparent"
                   placeholder="Subjek Pesan"
@@ -1583,7 +1590,7 @@
               class="w-12 h-12 bg-brutalism-green border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
               title="WhatsApp"
             >
-              <img
+              <img loading="lazy"
                 src="https://api.iconify.design/mdi:whatsapp.svg"
                 width="28px"
                 alt="WhatsApp Icon"
@@ -1596,7 +1603,7 @@
               class="w-12 h-12 bg-brutalism-blue border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
               title="LinkedIn"
             >
-              <img
+              <img loading="lazy"
                 src="https://api.iconify.design/mdi:linkedin.svg"
                 width="28px"
                 alt="LinkedIn Icon"
@@ -1609,7 +1616,7 @@
               class="w-12 h-12 bg-brutalism-purple border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
               title="GitHub"
             >
-              <img
+              <img loading="lazy"
                 src="https://api.iconify.design/mdi:github.svg"
                 width="28px"
                 alt="GitHub Icon"
@@ -1622,7 +1629,7 @@
               class="w-12 h-12 bg-brutalism-pink border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] flex items-center justify-center hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all rounded-md"
               title="Instagram"
             >
-              <img
+              <img loading="lazy"
                 src="https://api.iconify.design/mdi:instagram.svg"
                 width="28px"
                 alt="Instagram Icon"
@@ -1640,8 +1647,11 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script defer src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script defer src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -77,12 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const successText = window.translationsData?.[currentLang]?.['form-submit-success'] || 'Pesan berhasil terkirim!';
       const errorText = window.translationsData?.[currentLang]?.['form-submit-error'] || 'Gagal mengirim pesan. Silakan coba lagi.';
 
-      // Get values
-      const nameVal = document.getElementById('name')?.value;
-      const emailVal = document.getElementById('email')?.value;
-      const subjectVal = document.getElementById('subject')?.value;
-      const messageVal = document.getElementById('message')?.value;
-
       // Disable button & show loading state
       if (submitBtn) submitBtn.disabled = true;
       if (submitText) {
@@ -94,17 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackDiv.className = "hidden font-bold text-center border-4 border-black p-3 rounded-md shadow-brutalism text-sm uppercase";
       }
 
-      const templateParams = {
-        name: nameVal,
-        from_name: nameVal,
-        email: emailVal,
-        reply_to: emailVal,
-        subject: subjectVal,
-        message: messageVal
-      };
-
       if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.publicKey !== 'YOUR_PUBLIC_KEY') {
-        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams)
+        emailjs.sendForm(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, contactForm)
           .then(() => {
             // Show Success
             if (feedbackDiv) {
