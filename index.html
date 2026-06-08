@@ -1395,7 +1395,7 @@
                       Email
                     </h4>
                     <p class="font-bold text-black text-sm">
-                      muhamadadrian2507@gmail.com
+                      muhamadadrian<wbr/>2507<wbr/>@gmail.com
                     </p>
                   </div>
                 </div>
@@ -1407,11 +1407,9 @@
             class="bg-brutalism-blue border-4 border-black shadow-brutalism p-6 md:p-8 rounded-md reveal reveal-right"
           >
             <form
-              action="https://formsubmit.co/muhamadadrian2507@gmail.com"
-              method="POST"
+              id="contact-form"
               class="flex flex-col gap-6"
             >
-              <input type="hidden" name="_captcha" value="false" />
               <div class="relative pt-2">
                 <input
                   type="text"
@@ -1491,6 +1489,10 @@
                 <span class="iconify text-3xl" data-icon="mdi:send"></span>
                 <span data-translate="form-submit">Kirim Sekarang</span>
               </button>
+              <div
+                id="form-feedback"
+                class="hidden font-bold text-center border-4 border-black p-3 rounded-md shadow-brutalism text-sm uppercase"
+              ></div>
             </form>
           </div>
         </div>
@@ -1638,6 +1640,7 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>

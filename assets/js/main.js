@@ -1,3 +1,11 @@
+// EMAILJS CONFIGURATION
+// Ganti pakai Service ID, Template ID, dan Public Key dari akun EmailJS
+const EMAILJS_CONFIG = {
+  publicKey: 'NlAPeT75ll8bYFXu5',
+  serviceId: 'service_00pcray',
+  templateId: 'template_f6fwy4k'
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const revealElements = document.querySelectorAll('.reveal');
 
@@ -46,6 +54,98 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error loading translations:', err);
       typeEffect(document.getElementById('dev-title'), "Data Processor", 70, 0);
     });
+
+  // Initialize EmailJS
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init({
+      publicKey: EMAILJS_CONFIG.publicKey,
+    });
+  }
+
+  // Handle contact form submission via EmailJS
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const submitText = submitBtn ? submitBtn.querySelector('span[data-translate="form-submit"]') || submitBtn : null;
+      const feedbackDiv = document.getElementById('form-feedback');
+      const currentLang = localStorage.getItem('lang') || 'id';
+      
+      const loadingText = window.translationsData?.[currentLang]?.['form-submit-loading'] || 'Mengirim...';
+      const successText = window.translationsData?.[currentLang]?.['form-submit-success'] || 'Pesan berhasil terkirim!';
+      const errorText = window.translationsData?.[currentLang]?.['form-submit-error'] || 'Gagal mengirim pesan. Silakan coba lagi.';
+
+      // Get values
+      const nameVal = document.getElementById('name')?.value;
+      const emailVal = document.getElementById('email')?.value;
+      const subjectVal = document.getElementById('subject')?.value;
+      const messageVal = document.getElementById('message')?.value;
+
+      // Disable button & show loading state
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitText) {
+        submitText.dataset.originalText = submitText.innerHTML;
+        submitText.textContent = loadingText;
+      }
+      if (feedbackDiv) {
+        feedbackDiv.classList.add('hidden');
+        feedbackDiv.className = "hidden font-bold text-center border-4 border-black p-3 rounded-md shadow-brutalism text-sm uppercase";
+      }
+
+      const templateParams = {
+        from_name: nameVal,
+        reply_to: emailVal,
+        subject: subjectVal,
+        message: messageVal
+      };
+
+      if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.publicKey !== 'YOUR_PUBLIC_KEY') {
+        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams)
+          .then(() => {
+            // Show Success
+            if (feedbackDiv) {
+              feedbackDiv.textContent = successText;
+              feedbackDiv.classList.remove('hidden');
+              feedbackDiv.classList.add('bg-brutalism-green', 'text-black');
+            }
+            contactForm.reset();
+          })
+          .catch((err) => {
+            console.error('EmailJS Error:', err);
+            // Show Error
+            if (feedbackDiv) {
+              feedbackDiv.textContent = errorText;
+              feedbackDiv.classList.remove('hidden');
+              feedbackDiv.classList.add('bg-brutalism-pink', 'text-white');
+            }
+          })
+          .finally(() => {
+            // Reset button
+            if (submitBtn) submitBtn.disabled = false;
+            if (submitText) {
+              submitText.innerHTML = submitText.dataset.originalText;
+            }
+          });
+      } else {
+        // Fallback or warning if keys are not configured yet
+        console.warn('EmailJS is not configured yet with valid credentials. Simulation success.');
+        setTimeout(() => {
+          if (feedbackDiv) {
+            feedbackDiv.textContent = successText + " (Simulation Mode - silakan atur EMAILJS_CONFIG di main.js)";
+            feedbackDiv.classList.remove('hidden');
+            feedbackDiv.classList.add('bg-brutalism-green', 'text-black');
+          }
+          if (submitBtn) submitBtn.disabled = false;
+          if (submitText) {
+            submitText.innerHTML = submitText.dataset.originalText;
+          }
+          contactForm.reset();
+        }, 1500);
+      }
+    });
+  }
 });
 
 window.typeTimer = null;

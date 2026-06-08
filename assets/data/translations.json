@@ -63,7 +63,10 @@
     "form-email-placeholder": "Email Anda",
     "form-subject-placeholder": "Subjek Pesan",
     "form-message-placeholder": "Pesan Anda",
-    "form-submit": "Kirim Sekarang"
+    "form-submit": "Kirim Sekarang",
+    "form-submit-loading": "Mengirim...",
+    "form-submit-success": "Pesan berhasil terkirim!",
+    "form-submit-error": "Gagal mengirim pesan. Silakan coba lagi."
   },
   "en": {
     "nav-home": "Home",
@@ -129,6 +132,9 @@
     "form-email-placeholder": "Your Email",
     "form-subject-placeholder": "Subject",
     "form-message-placeholder": "Your Message",
-    "form-submit": "Send Now"
+    "form-submit": "Send Now",
+    "form-submit-loading": "Sending...",
+    "form-submit-success": "Message sent successfully!",
+    "form-submit-error": "Failed to send message. Please try again."
   }
 }
