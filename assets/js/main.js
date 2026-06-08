@@ -95,7 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const templateParams = {
+        name: nameVal,
         from_name: nameVal,
+        email: emailVal,
         reply_to: emailVal,
         subject: subjectVal,
         message: messageVal
