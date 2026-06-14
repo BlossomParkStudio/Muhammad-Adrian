@@ -287,3 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+window.showPrivateAlert = function () {
+  const currentLang = localStorage.getItem('lang') || 'id';
+  const translations = window.translationsData?.[currentLang] || {};
+  const alertText = translations['private-alert'] || 'Maaf, source code proyek ini bersifat privat.';
+  alert(alertText);
+};
